@@ -1,5 +1,5 @@
 def main():
-  draw(board)
+  draw()
   pass
 
 def draw(board):
