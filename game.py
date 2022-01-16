@@ -1,4 +1,6 @@
-#plays game
+from createBoard import createBoard
+from displayBoard import displayBoard
+
 def main():
     player = nextPlayer("")
     board = createBoard()
@@ -8,23 +10,6 @@ def main():
         player = nextPlayer(player)
     displayBoard(board)
     print("Good game. Thanks for playing!") 
-
-#gives range of squares and creates the board
-def createBoard():
-    board = []
-    for square in range(9):
-        board.append(square + 1)
-    return board
-
-#displays how the board will look
-def displayBoard(board):
-    print()
-    print(f"{board[0]}|{board[1]}|{board[2]}")
-    print('-+-+-')
-    print(f"{board[3]}|{board[4]}|{board[5]}")
-    print('-+-+-')
-    print(f"{board[6]}|{board[7]}|{board[8]}")
-    print()
 
 #makes the game end in a draw if all squares are used
 def draw(board):
